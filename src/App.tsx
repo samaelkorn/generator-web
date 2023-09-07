@@ -1,10 +1,8 @@
-function App() {
+const App = () => {
   return (
-    <>
-      <div>
-
-      </div>
-    </>
+    <div>
+      <h2>Папка views</h2>
+    </div>
   )
 }
 
