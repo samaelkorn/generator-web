@@ -25,7 +25,8 @@
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types"
-    ]
+    ],
+    "experimentalDecorators": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
