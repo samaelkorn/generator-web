@@ -7,8 +7,9 @@ export const filterKey = (fields: string[]) =>
             return result
         }
         return result.map((item: any) => {
+            const copy = structuredClone(item)
             fields.forEach(field => {
-                delete item[field]
+                delete copy[field]
             })
             return item
         })

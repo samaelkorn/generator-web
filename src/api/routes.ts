@@ -18,6 +18,10 @@ class Routes {
     getMenu(): Omit<TR, "element">[] {
         return this.routes
     }
+
+    getRoute() {
+        return this.routes
+    }
 }
 
 export default new Routes()

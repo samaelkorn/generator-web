@@ -20,7 +20,7 @@ const router = createHashRouter([
 
 const Layout = () => {
     const menu = routesApi.getMenu()
-    console.log(menu)
+    console.log(routesApi.getRoute())
 
     useEffect(() => {
         sectionApi.getRoot()
