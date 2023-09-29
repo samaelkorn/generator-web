@@ -2,8 +2,7 @@ export type CreateDecoratorActionAsync<T> = (self: T, originalMethod: Function, 
 export type CreateDecoratorAction<T> = (self: T, originalMethod: Function, ...args: any[]) => void
 
 export function createDecoratorAsync<T = any>(action: CreateDecoratorActionAsync<T>) {
-    return (...arg: [T, string, PropertyDescriptor]) => {
-        const [, , descriptor] = arg
+    return (...[, , descriptor]: [T, string, PropertyDescriptor]) => {
         const originalMethod = descriptor.value
         descriptor.value = async function (...args: any[]) {
             const _this = this as T
@@ -12,8 +11,7 @@ export function createDecoratorAsync<T = any>(action: CreateDecoratorActionAsync
     }
 }
 export function createDecorator<T = any>(action: CreateDecoratorAction<T>) {
-    return (...arg: [T, string, PropertyDescriptor]) => {
-        const [, , descriptor] = arg
+    return (...[, , descriptor]: [T, string, PropertyDescriptor]) => {
         const originalMethod = descriptor.value
         descriptor.value = function (...args: any[]) {
             const _this = this as T

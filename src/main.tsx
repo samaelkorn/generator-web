@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import Layout from '@/modules/Layout/Layout'
 import 'bulma'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <>
-    <App />
+    <Layout />
   </>,
 )
